@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.layout-rules {
+		@apply max-w-[1440px] m-auto px-4 w-full;
+	}
+
+	.grid-responsive {
+		@apply grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-6;
+	}
+}
+
+#root {
+	@apply flex flex-col h-screen;
+}
+
+main {
+	@apply flex-1;
+}
+
+header,
+footer {
+	@apply bg-neutral text-neutral-content;
+}
+
+* {
+	scrollbar-width: thin;
+	scrollbar-color: hsl(262 80% 40%) hsl(220 17% 17%);
+}
+
+*::-webkit-scrollbar {
+	width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+	background: hsl(220 17% 17%);
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: hsl(262 80% 40%);
+	border-radius: 10px;
+	border: 3px solid hsl(220 17% 17%);
+}
